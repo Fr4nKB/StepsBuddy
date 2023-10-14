@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="18dp"
+            android:text="@string/stats"
+            android:textSize="25sp" />
+
+        <RelativeLayout
+            android:id="@+id/stepsGraphHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:background="@drawable/def_bckgnd">
+
+            <TextView
+                android:id="@+id/headerStepsGraph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="18dp"
+                android:text="@string/steps"
+                android:textSize="18sp" />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/stepsGraph"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_below="@id/headerStepsGraph"
+                android:background="@drawable/def_bckgnd" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/calGraphHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stepsGraphHolder"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/def_bckgnd">
+
+            <TextView
+                android:id="@+id/headerCalGraph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="18dp"
+                android:text="@string/cal"
+                android:textSize="18sp" />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/calGraph"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_below="@id/headerCalGraph" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/headerPathsSlots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calGraphHolder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/savedTracks"
+            android:textSize="18sp" />
+
+        <TableLayout
+            android:id="@+id/pathContainer"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/def_bckgnd"
+            android:stretchColumns="0"
+            android:layout_below="@id/headerPathsSlots"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+
+        </TableLayout>
+
+    </RelativeLayout>
+</ScrollView>
