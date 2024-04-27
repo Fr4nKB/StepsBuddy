@@ -36,7 +36,8 @@ public class MainService extends Service implements SensorEventListener {
         }
 
         Intent i = new Intent(this, MainActivity.class);
-        PendingIntent pi = PendingIntent.getActivity(this, 0, i, 0);
+        PendingIntent pi = PendingIntent.getBroadcast(this, 0, i,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         n = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentIntent(pi).setContentTitle(APP_NAME).setSmallIcon(R.drawable.ic_home).build();

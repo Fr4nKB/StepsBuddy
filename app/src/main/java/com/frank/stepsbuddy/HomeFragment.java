@@ -277,7 +277,8 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
     private void setAlarm(Context context, Calendar calendar) {
         AlarmManager am = (AlarmManager) context.getSystemService(ALARM_SERVICE);
         Intent i = new Intent(MIDNIGHT_RESET);
-        PendingIntent pi = PendingIntent.getBroadcast(context, 0, i, 0);
+        PendingIntent pi = PendingIntent.getBroadcast(context, 0, i,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pi);
     }

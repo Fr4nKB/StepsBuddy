@@ -28,6 +28,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'com.frank.stepsbuddy'
 }
 
 dependencies {
@@ -47,4 +48,5 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:18.0.0'
     implementation "androidx.work:work-runtime:2.7.0"
     implementation 'com.jjoe64:graphview:4.2.2'
+    implementation 'androidx.work:work-runtime:2.7.1'
 }
